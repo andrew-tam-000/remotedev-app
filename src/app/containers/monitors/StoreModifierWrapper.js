@@ -18,7 +18,11 @@ StoreModifierWrapper.contextTypes = {
 
 function mapDispatchToProps(dispatch) {
     return {
-        dispatch: bindActionCreators(dispatchRemotely, dispatch)
+        dispatch: action  => {
+            const modifiedDispatch = bindActionCreators(dispatchRemotely, dispatch);
+            const stringifiedAction = JSON.stringify(action);
+            modifiedDispatch(stringifiedAction);
+        }
     };
 }
 
