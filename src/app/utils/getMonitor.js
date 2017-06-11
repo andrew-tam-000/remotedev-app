@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import LogMonitor from 'redux-devtools-log-monitor';
 import ChartMonitorWrapper from '../containers/monitors/ChartMonitorWrapper';
 import InspectorWrapper from '../containers/monitors/InspectorWrapper';
-import StoreModifier from 'redux-devtools-store-modifier';
+import StoreModifierWrapper from  '../containers/monitors/StoreModifierWrapper';
 
 export const monitors = [
   { key: 'StoreModifier', title: 'Store Modifier' },
@@ -14,7 +14,7 @@ export const monitors = [
 export default function getMonitor({ monitor, lib }) {
   switch (monitor) {
     case 'StoreModifier':
-      return <StoreModifier/>;
+      return <StoreModifierWrapper/>;
     case 'LogMonitor':
       return <LogMonitor preserveScrollTop={false} markStateDiff />;
     case 'ChartMonitor':
