@@ -102,6 +102,7 @@
     "redux-devtools": "^3.0.0",
     "redux-devtools-chart-monitor": "^1.6.1",
     "redux-devtools-log-monitor": "^1.2.0",
+    "redux-devtools-store-modifier": "github:andrew-tam-000/redux-devtools-store-modifier",
     "redux-devtools-test-generator": "^0.4.0",
     "redux-devtools-themes": "^1.0.0",
     "remotedev-inspector-monitor": "^0.10.2",
