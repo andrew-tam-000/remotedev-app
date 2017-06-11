@@ -5,9 +5,10 @@ import { bindActionCreators } from 'redux';
 import { dispatchRemotely } from '../../actions';
 
 
-const StoreModifierWrapper = ({computedStates, currentStateIndex}, context) => (
+const StoreModifierWrapper = ({computedStates, currentStateIndex, dispatch}, context) => (
     <StoreModifier
         state={ computedStates.length ? computedStates[currentStateIndex].state : {one: 'teo'}}
+        dispatch={dispatch}
     />
 )
 
